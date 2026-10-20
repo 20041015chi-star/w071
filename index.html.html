@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>絨絨星球 | 毛孩的溫馨小星球</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lavender: {
+                            50: '#fcfaff',
+                            100: '#f7f3ff',
+                            200: '#eee5ff',
+                            300: '#dcbeff',
+                            400: '#c08eff',
+                            500: '#a35aff',
+                        },
+                        softblue: {
+                            50: '#f0f8ff',
+                            100: '#e0f1ff',
+                            200: '#bae0ff',
+                            300: '#7cc3ff',
+                            400: '#38a1ff',
+                        },
+                        pastel: {
+                            purple: '#EBF4FF',
+                            cardBg: '#FFFFFF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Maru Gothic"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background: linear-gradient(135deg, #F3F0FF 0%, #E6F0FA 100%);
+            background-attachment: fixed;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 25px -5px rgba(163, 90, 255, 0.08), 0 8px 10px -6px rgba(56, 161, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation / Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-300 to-blue-200 flex items-center justify-center text-purple-600 shadow-sm">
+                    <i class="fa-solid font-bold fa-paw text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-800 tracking-wide">絨絨星球</h1>
+                    <p class="text-xs text-purple-400">Fur Planet Studio</p>
+                </div>
+            </div>
+            <a href="#booking" class="bg-gradient-to-r from-purple-400 to-blue-400 hover:from-purple-500 hover:to-blue-500 text-white font-medium px-4 py-2 rounded-full text-sm transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-1.5">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>預約聊天</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 space-y-10 flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-10 soft-shadow border border-white text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-4 max-w-lg">
+                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-medium rounded-full">
+                    ✨ 下班後的毛孩放鬆時光
+                </span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-800 leading-relaxed">
+                    哈囉！今天辛苦啦 🐾<br>
+                    帶著寶貝來<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">絨絨星球</span>放鬆一下吧！
+                </h2>
+                <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                    忙了一整天，是不是也很想給家裡的小寶貝最溫柔的照顧呢？無論是洗澡美容、安親散步，還是想找人聊聊小型犬的照顧小眉角，我們隨時準備好熱茶跟肉乾等你們唷！
+                </p>
+            </div>
+            <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-tr from-purple-200 via-blue-100 to-purple-100 p-3 shadow-inner flex flex-col items-center justify-center text-center">
+                <div class="w-full h-full border-2 border-dashed border-purple-300/60 rounded-xl flex flex-col items-center justify-center p-2 bg-white/50">
+                    <i class="fa-solid fa-dog text-4xl text-purple-400 mb-2"></i>
+                    <span class="text-xs font-medium text-slate-600">專為小型犬設計</span>
+                    <span class="text-[10px] text-slate-400 mt-1">吉娃娃 / 貴賓 / 博美 / 瑪爾</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Highlights -->
+        <section class="space-y-4">
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-heart text-purple-400"></i>
+                    為毛爸毛媽準備的服務
+                </h3>
+                <p class="text-xs text-slate-500">了解上班族爸媽的辛苦，我們時間彈性又用心～</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-white/80 rounded-2xl p-5 border border-purple-50 hover:border-purple-200 transition-all soft-shadow hover:-translate-y-1">
+                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-500 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-shower text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">輕柔低敏 SPA 美容</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        針對小型犬敏感肌膚選用天然植萃洗劑，全程一對一不趕時間，讓寶貝像在做高級 SPA。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/80 rounded-2xl p-5 border border-blue-50 hover:border-blue-200 transition-all soft-shadow hover:-translate-y-1">
+                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-500 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-clock text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">上班族安心托育</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        加班不用擔心寶貝獨自在家！舒適大空間、陪玩散步，隨時回報照片影片讓你超級放心。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white/80 rounded-2xl p-5 border border-purple-50 hover:border-purple-200 transition-all soft-shadow hover:-translate-y-1">
+                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-500 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-bone text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">手作嚴選健康零食</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        工作室親自低溫烘焙的小型犬一口零食，無添加香料，獎勵寶貝的最佳選擇！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Friendly Interactive Section -->
+        <section id="booking" class="bg-gradient-to-r from-purple-100/70 to-blue-100/70 rounded-3xl p-6 md:p-8 border border-white/80 text-center space-y-4">
+            <h3 class="text-xl font-bold text-slate-800">
+                想帶寶貝來玩嗎？跟我說一聲吧！ 💌
+            </h3>
+            <p class="text-xs md:text-sm text-slate-600 max-w-md mx-auto">
+                第一次來建議先傳個訊息，告訴我寶貝的名字跟個性，讓我提前準備好牠最喜歡的小玩具唷！
+            </p>
+
+            <form onsubmit="handleSubmit(event)" class="max-w-md mx-auto space-y-3 text-left">
+                <div>
+                    <label class="block text-xs font-medium text-slate-600 mb-1">怎麼稱呼您？</label>
+                    <input type="text" placeholder="例如：林小姐 / 寶貝媽咪" required class="w-full px-4 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 bg-white/90 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-600 mb-1">寶貝的名字與犬種</label>
+                    <input type="text" placeholder="例如：球球（博美）" required class="w-full px-4 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 bg-white/90 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-600 mb-1">想約的時間或想問的事</label>
+                    <textarea rows="3" placeholder="例如：這週五下班後想帶寶貝來洗澡～" required class="w-full px-4 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 bg-white/90 text-sm resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-400 to-blue-400 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>發送訊息給工作室</span>
+                </button>
+            </form>
+
+            <div id="message-box" class="hidden p-4 rounded-xl bg-white text-purple-600 text-sm font-medium shadow-sm border border-purple-100 max-w-md mx-auto">
+                🎉 收到你的訊息囉！我會盡快回覆你，期待見到你們！
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white/60 backdrop-blur-sm border-t border-purple-100 py-6 text-center text-slate-500 text-xs space-y-2">
+        <p class="flex items-center justify-center gap-1">
+            <span>© 2026 絨絨星球 Fur Planet Studio</span>
+            <span>•</span>
+            <span>小型犬的溫馨基地</span>
+        </p>
+        <p class="text-purple-400 font-medium">
+            製作：芝芝
+        </p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const msgBox = document.getElementById('message-box');
+            msgBox.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
